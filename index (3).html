@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NewsletterApp Navbar</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .navbar-brand .green {
+            color: #00aa63;
+            font-weight: 700;
+        }
+
+        .navbar-brand .gray {
+            color: #333;
+            font-size: 0.75rem;
+            vertical-align: top;
+            position: relative;
+            top: -2px;
+            margin-left: 2px;
+        }
+
+        .nav-link {
+            color: #1c1c1c !important;
+            font-weight: 500;
+        }
+
+        .nav-link.active {
+            color: #00aa63 !important;
+        }
+
+        .login-btn a {
+            padding: 10px 28px;
+            border: 2px solid #00aa63;
+            border-radius: 30px;
+            color: #00aa63;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .login-btn a:hover {
+            background-color: #00aa63;
+            color: white;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .green {
+            color: #00aa63;
+        }
+
+        .gray {
+            color: #333333;
+            font-weight: normal;
+            font-size: 14px;
+            margin-left: 2px;
+            vertical-align: top;
+            position: relative;
+            top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1c1c1c;
+            font-weight: 500;
+        }
+
+        .nav-links a.active {
+            color: #00aa63;
+        }
+
+        .login-btn a {
+            text-decoration: none;
+            padding: 12px 30px;
+            border: 2px solid #00aa63;
+            border-radius: 30px;
+            color: #00aa63;
+            font-weight: bold;
+            background-color: #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .login-btn a:hover {
+            background-color: #00aa63;
+            color: #ffffff;
+        }
+
+        .navbar-brand .green {
+            color: #00aa63;
+            font-weight: 700;
+        }
+
+        .navbar-brand .gray {
+            color: #333;
+            font-size: 0.75rem;
+            vertical-align: top;
+            position: relative;
+            top: -2px;
+            margin-left: 2px;
+        }
+
+        .nav-link {
+            color: #1c1c1c !important;
+            font-weight: 500;
+        }
+
+        .nav-link.active {
+            color: #00aa63 !important;
+        }
+
+        .login-btn a {
+            padding: 10px 28px;
+            border: 2px solid #00aa63;
+            border-radius: 30px;
+            color: #00aa63;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .login-btn a:hover {
+            background-color: #00aa63;
+            color: white;
+        }
+.newsletter-section {
+  background-color: #f8f8f8; /* Light background color */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-section h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.newsletter-section p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-filled {
+  background-color: #4CAF50; /* Green background for button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+.btn-filled:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Changed to column to stack cards vertically */
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card-container {
+            width: 80%; /* Adjust width as needed */
+            max-width: 600px;
+            background-color: #fff;
+            border: 2px solid #a020f0; /* Purple border */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .card-container::before {
+            content: "”"; /* Large quote mark */
+            font-size: 150px; /* Adjust size */
+            color: rgba(0, 0, 0, 0.1); /* Light grey for the quote */
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+            line-height: 0.8;
+        }
+
+        .card-header {
+            font-weight: bold;
+            color: #a020f0; /* Purple text for header */
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+    
+
+        
+        
+        
+    </style>
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white py-3 px-4">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="green">NEWSLETTER</span><span class="gray">APP</span>
+            </a>
+
+            <!-- Navbar toggler (for mobile view) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav me-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Why NewsletterApp?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+                <!-- Login Button -->
+                <div class="login-btn">
+                    <a href="#">LOGIN</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- text-section -->
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6"> <img src="./Frame.png" d-block mx-lg-auto img-fluid
+                alt="hero page" width="700" height="500" loading="lazy"> </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Bring back the joy of reading newsletters</h1>
+            <p class="lead">Discover, subscribe and manage all your email newsletters in one place..</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
+                    class="btn btn-primary btn-lg px-4 me-md-2">try for free</button> 
+                    
+            </div>
+        </div>
+    </div>
+    
+        <!-- feature-section -->
+    </header>
+
+    <section class="features-section">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="./Frame (2).png" alt="">
+                    
+                </div>
+                <div class="feature-item">
+                    <img src="./Frame 13.png" alt="One-Click Unsubscribe icon">
+                </div>
+                <div class="feature-item">
+                    <img src="./Group 831.png" alt="Community icon">
+                </div>
+                <div class="feature-item">
+                    <img src="./Group 214.png" alt="Control Your Feed icon">
+                    
+                </div>
+                <div class="feature-item">
+                    <img src="./Frame 13 (1).png" alt="Discover Newsletter icon">
+                
+                </div>
+                <div class="feature-item">
+                    <img src="./Group 211.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+        /* page center */
+  .page {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 20px;
+  }
+
+  /* hero / CTA block */
+  .hero {
+    background: #22282a; /* dark panel */
+    color: #e8f8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 44px;
+    border-radius: 2px;
+    gap: 28px;
+  }
+
+  .hero-left {
+    max-width: 60%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .hero p.lead {
+    color: #9be6b8; /* greenish subtitle */
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+
+  .features {
+    margin-top: 8px;
+    margin-bottom: 18px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 8px 0;
+    color: #cbd5d3;
+    font-size: 14px;
+  }
+
+  .check {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #79d09a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#79d09a;
+    flex-shrink: 0;
+  }
+
+  .subscribe-btn {
+    display: inline-block;
+    margin-top: 6px;
+    background:#19a968;
+    color:white;
+    padding: 11px 26px;
+    border-radius: 24px;
+    font-weight:600;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+  }
+
+  /* right illustration (stacked cards) */
+  .hero-right {
+    width: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* small responsive */
+  @media (max-width: 880px) {
+    .hero { flex-direction: column; text-align: left; }
+    .hero-left, .hero-right { max-width: 100%; width: 100%; }
+    .hero-right { margin-top: 10px; }
+  }
+
+  /* white card container under hero (footer content area) */
+  .info-card {
+    background: #fff;
+    border-radius: 3px;
+    margin-top: 18px;
+    padding: 26px 30px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.02) inset;
+  }
+
+  .links-row {
+    display:flex;
+    justify-content:space-between;
+    gap: 16px;
+    flex-wrap:wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eef0ef;
+  }
+
+  .links-col {
+    min-width: 160px;
+  }
+
+  .links-col h4 {
+    color: #1f8f5f;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight:600;
+  }
+
+  .links-col ul { list-style:none; color:#666; font-size:13px; }
+  .links-col ul li { margin:6px 0; }
+
+  .note {
+    font-size:11px;
+    color:#9aa09b;
+    margin-top: 10px;
+  }
+
+  /* green footer bar */
+  .green-bar {
+    background: #19a968;
+    margin-top: 12px;
+    padding: 12px 22px;
+    color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-radius: 2px;
+    font-size:13px;
+  }
+
+  .brand {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    letter-spacing: .6px;
+  }
+
+  .brand small { font-weight:400; opacity:0.9; font-size:12px; }
+
+</style>
+</head>
+<body>
+  <div class="page">
+    <!-- Hero dark band -->
+    <section class="hero" role="region" aria-label="newsletter-cta">
+      <div class="hero-left">
+        <h1>Bring back the joy of reading newsletters</h1>
+        <p class="lead">Subscribe and be ready for an amazing experience</p>
+
+        <div class="features" aria-hidden="false">
+          <div class="feature"><span class="check">✓</span><div>Save time and read your newsletters in one place.</div></div>
+          <div class="feature"><span class="check">✓</span><div>Organize your newsletter feed according to your interests.</div></div>
+          <div class="feature"><span class="check">✓</span><div>Forget about newsletters emails and focus only in reading.</div></div>
+        </div>
+
+        <a class="subscribe-btn" href="#" role="button">SUBSCRIBE</a>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <!-- simple decorative stacked cards illustration -->
+        <svg width="240" height="160" viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- back card -->
+          <rect x="40" y="8" width="160" height="100" rx="6" fill="#0fa76d" opacity="0.12"/>
+          <rect x="38" y="6" width="160" height="100" rx="6" fill="#11b97a" opacity="0.16"/>
+          <!-- middle -->
+          <rect x="24" y="30" width="160" height="100" rx="6" fill="#0fa76d" opacity="0.18"/>
+          <!-- front card -->
+          <rect x="10" y="52" width="160" height="100" rx="6" fill="#0fbf73"/>
+          <!-- lines front -->
+          <g transform="translate(20,66)" fill="#eafaf0">
+            <rect x="6" y="6" width="106" height="8" rx="3"/>
+            <rect x="6" y="22" width="120" height="8" rx="3"/>
+            <rect x="6" y="38" width="70" height="8" rx="3"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- white info block (footer-like) -->
+    <div class="info-card" role="contentinfo">
+      <div class="links-row">
+        <div class="links-col">
+          <h4>Get started</h4>
+          <ul>
+            <li>Blog</li>
+            <li>Site Map</li>
+            <li>F.A.Q.</li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h4>Pricing</h4>
+          <ul>
+            <li>Bronze</li>
+            <li>Silver</li>
+            <li>Gold</li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h4>Follow</h4>
+          <ul>
+            <li>Facebook</li>
+            <li>LinkedIn</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note">
+        Data is a real-time snapshot *Data is delayed at least 15 minutes. Global Olives and Natural product, Market and Analysis.
+      </div>
+
+      <div class="green-bar" style="margin-top:18px;">
+        <div style="font-size:13px;">Privacy Policy &nbsp; / &nbsp; Personal Information &nbsp; / &nbsp; Terms of Service</div>
+        <div class="brand">
+          <div style="font-size:11px; opacity:.95;">2021</div>
+          <div>NEWSLETTER<span style="font-size:10px; opacity:.85; margin-left:6px;">APP</span></div>
+        </div>
+      </div>
+    </div>
+
+    </section>
+   
+    </section>
+    
+
+
+</body>
+
+</html>
